@@ -1,0 +1,135 @@
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.dashboard-order {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #f6f8fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-address {
+    margin-top: 20px;
+}
+
+.order-address h4 {
+    color: #333;
+}
+
+.order-time {
+    margin: 10px 0;
+    color: #666;
+}
+
+.order-wrapper {
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 20px 0;
+}
+
+.order-wrapper::-webkit-scrollbar{
+    width: 7px;
+}
+
+.order-wrapper::-webkit-scrollbar-track{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+.order-wrapper::-webkit-scrollbar-thumb {
+    background-color: #61666b;
+    border-radius: 20px;
+}
+
+.order-card {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    padding: 10px 0;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.order-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.order-detail {
+    flex: 1;
+    padding: 10px;
+}
+
+.order-detail p {
+    margin-bottom: 5px;
+}
+
+.order-price {
+    margin: 0;
+    color: #ff6600;
+}
+
+.divider {
+    width: 100%;
+    border: 1px dashed #d5d5d5;
+}
+
+.order-total > p {
+    padding: 10px 0;
+}
+
+.order-total > p > span {
+    float: right;
+    font-weight: 600;
+}
+
+.order-promo {
+    display: flex;
+    margin: 10px 0;
+}
+
+.input-promo {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.butto-promo {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    
+
+}
+.checkout:hover {
+    text-transform: uppercase;
+    font-weight: 600;
+}

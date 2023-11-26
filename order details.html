@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details Form</title>
+    <style>
+        body {
+           background-color: #b0f8b4;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #000000;
+        }
+
+        .dotted-line {
+            border: none;
+            border-top: 1px dotted #000000;
+            margin: 10px 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4e4caf;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+<div class="form-container">
+    <form id="orderForm" onsubmit="return validateAndSubmit()">
+        <h1>Sawad Express</h1>
+        <hr class="dotted-line">
+        <h2>Fill Order Details</h2>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="foodType">Food Type:</label>
+        <select id="foodType" name="foodType" required>
+            <option value="veg">Vegetarian</option>
+            <option value="nonVeg">Non-Vegetarian</option>
+        </select>
+
+        <label for="paymentMode">Payment Mode:</label>
+        <select id="paymentMode" name="paymentMode" required>
+            <option value="creditCard">Credit Card</option>
+            <option value="debitCard">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="instructions">Any Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="4"></textarea>
+
+        <button type="button" onclick="redirectToLogin()">Place Order</button>
+    </form>
+</div>
+    <script>
+        function redirectToLogin() {
+          window.location.href = 'thankyou.html';
+        }
+      </script>
+
+</body>
+
+</html>
